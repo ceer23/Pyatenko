@@ -24,10 +24,41 @@
       width: 100%;
     }
 
-    /* Настройки для изображений на мобильных устройствах */
+    /* Медиазапросы для адаптации на мобильных устройствах */
     @media (max-width: 768px) {
-      .image-scroll-container img {
-        width: 80vw; /* Ширина изображения 80% от ширины экрана */
+      .flex img {
+        width: 80vw;
+        height: auto;
+      }
+
+      .catalog-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-text {
+        font-size: 3xl;
+      }
+      
+      .hero-button {
+        padding: 12px 24px;
+      }
+
+      .info-section p {
+        font-size: 1rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .hero-text {
+        font-size: 2xl;
+      }
+
+      .hero-button {
+        padding: 10px 20px;
+      }
+
+      .info-section p {
+        font-size: 0.875rem;
       }
     }
   </style>
@@ -40,9 +71,9 @@
       <img src="background2.jpg" alt="Значки" class="rounded-xl shadow-lg transition-transform transform hover:scale-110 hover:opacity-80">
       <img src="background3.jpg" alt="Наліпки" class="rounded-xl shadow-lg transition-transform transform hover:scale-110 hover:opacity-80">
     </div>
-    <h1 class="text-5xl font-bold mb-4">Заціни нас!</h1>
+    <h1 class="hero-text text-5xl font-bold mb-4">Заціни нас!</h1>
     <p class="text-xl mb-6 max-w-xl">Ми — виробники сувенірної продукції з акрилу, пластику. Робимо фігурки, підставки, брелоки та багато іншого!</p>
-    <a href="#catalog" class="bg-pink-500 hover:bg-pink-600 text-white font-semibold px-6 py-3 rounded-full transition">Переглянути каталог</a>
+    <a href="#catalog" class="hero-button bg-pink-500 hover:bg-pink-600 text-white font-semibold px-6 py-3 rounded-full transition">Переглянути каталог</a>
     <div class="flex justify-center mt-6">
       <a href="#catalog" class="text-3xl text-white hover:text-pink-500">
         <i class="fas fa-arrow-down"></i>
@@ -53,5 +84,55 @@
   <!-- Каталог -->
   <section id="catalog" class="py-16 px-6 bg-gray-800">
     <h2 class="text-4xl font-bold text-center mb-10">Каталог товарів</h2>
-    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-      <div class="
+    <div class="grid catalog-grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+      <div class="bg-gray-700 p-4 rounded-xl shadow-lg hover:scale-105 transition-transform">
+        <img src="58mm.jpg" alt="Значок D 58 mm" class="rounded mb-4 w-full h-64 object-cover">
+        <h3 class="text-2xl font-semibold">Значок D 58 mm</h3>
+        <p class="mt-2 text-gray-300">Колір основи: білий, чорний, жовтий, рожевий.</p>
+        <p class="text-gray-300">Ціна: 14 ₴ без ПДВ.</p>
+      </div>
+      <div class="bg-gray-700 p-4 rounded-xl shadow-lg hover:scale-105 transition-transform">
+        <img src="32mm.jpg" alt="Значок D 32 mm" class="rounded mb-4 w-full h-64 object-cover">
+        <h3 class="text-2xl font-semibold">Значок D 32 mm</h3>
+        <p class="mt-2 text-gray-300">Колір основи: білий, чорний, жовтий, рожевий.</p>
+        <p class="text-gray-300">Ціна: 12 ₴ без ПДВ.</p>
+      </div>
+      <div class="bg-gray-700 p-4 rounded-xl shadow-lg hover:scale-105 transition-transform">
+        <img src="sticker45.jpg" alt="Об'ємна наліпка 50x50 мм" class="rounded mb-4 w-full h-64 object-cover">
+        <h3 class="text-2xl font-semibold">Наліпка об'ємна 50x50 мм (моно)</h3>
+        <p class="mt-2 text-gray-300">до 100 шт. – 25 ₴; від 100 до 500 – 23 ₴; від 500 до 1000 – 20 ₴; понад 1000 шт. – 18 ₴ без ПДВ.</p>
+      </div>
+      <div class="bg-gray-700 p-4 rounded-xl shadow-lg hover:scale-105 transition-transform">
+        <img src="brelock.jpg" alt="Акриловий брелок" class="rounded mb-4 w-full h-64 object-cover">
+        <h3 class="text-2xl font-semibold">Брелок акриловий (3 мм)</h3>
+        <p class="mt-2 text-gray-300">Ціна: 25 ₴ без ПДВ.</p>
+      </div>
+      <div class="bg-gray-700 p-4 rounded-xl shadow-lg hover:scale-105 transition-transform">
+        <img src="58mm2.jpg" alt="Значок" class="rounded mb-4 w-full h-64 object-cover">
+        <h3 class="text-2xl font-semibold">Значок D 58 mm (об'ємний)</h3>
+        <p class="mt-2 text-gray-300">Ціна: 25 ₴ без ПДВ.</p>
+      </div>
+    </div>
+    <div class="flex justify-center items-center gap-2 mt-10 text-lg text-pink-400">
+      <i class="fas fa-arrow-down animate-bounce"></i>
+      <span class="font-semibold">Якщо зацікавило, Вам сюди!</span>
+      <i class="fas fa-arrow-down animate-bounce"></i>
+    </div>
+  </section>
+
+  <!-- Інфо -->
+  <section class="py-16 px-6 bg-gradient-to-br from-indigo-700 to-purple-900 rounded-xl mx-4 mt-10 info-section">
+    <h2 class="text-4xl font-bold text-center mb-6">Інфо</h2>
+    <p class="text-center text-xl text-gray-200">
+      ФОП П'ятенко Максим Тарасович м. Кременчук<br>
+      <i class="fas fa-phone-alt mr-2"></i>+380675465788<br>
+      <i class="fas fa-envelope mr-2"></i>grey55025@gmail.com
+    </p>
+  </section>
+
+  <!-- Підвал -->
+  <footer class="text-center py-6 bg-gray-800 text-gray-400">
+    <p>&copy; 2025. Усі права захищено.</p>
+  </footer>
+</body>
+</html>
