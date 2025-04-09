@@ -6,6 +6,22 @@
   <title>AnimeCraft — Аніме сувеніри</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <style>
+    /* Адаптивные изображения */
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    /* Адаптация изображений в секции Hero на мобильных устройствах */
+    @media (max-width: 768px) {
+      .flex img {
+        width: 100%;
+        height: auto;
+      }
+    }
+  </style>
 </head>
 <body class="bg-gray-900 text-white font-sans">
   <!-- Hero -->
@@ -51,7 +67,7 @@
         <h3 class="text-2xl font-semibold">Брелок акриловий (3 мм)</h3>
         <p class="mt-2 text-gray-300">Ціна: 25 ₴ без ПДВ.</p>
       </div>
-	  <div class="bg-gray-700 p-4 rounded-xl shadow-lg hover:scale-105 transition-transform">
+      <div class="bg-gray-700 p-4 rounded-xl shadow-lg hover:scale-105 transition-transform">
         <img src="58mm2.jpg" alt="Значок" class="rounded mb-4 w-full h-64 object-cover">
         <h3 class="text-2xl font-semibold">Значок D 58 mm (об'ємний)</h3>
         <p class="mt-2 text-gray-300">Ціна: 25 ₴ без ПДВ.</p>
